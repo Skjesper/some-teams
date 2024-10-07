@@ -1,5 +1,7 @@
+</main>
 </body>
-
-<footer>Jesper Skeppstedt est 1993</footer>
+<div class="footerGrid">
+  <footer>Jesper Skeppstedt est 1993</footer>
+</div>
 
 </html>

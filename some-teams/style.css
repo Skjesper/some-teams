@@ -1,36 +1,58 @@
-/* Grid container */
-.gridItemsBox {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr); /* 4 columns */
-  gap: 20px; /* Space between the grid items */
-  padding: 20px;
+:root {
+  font-family: 'Poppins';
 }
 
-/* Individual grid items (each team) */
-.gridItems {
-  border: 1px solid #000; /* Box border */
-  padding: 15px; /* Internal padding */
-  text-align: center; /* Center the text and content */
-  background-color: #f9f9f9; /* Background color for each box */
-  border-radius: 10px; /* Optional rounded corners */
-}
-
-/* Image styling */
-.gridItems img {
-  margin-bottom: 10px;
-}
-
-/* Adjust heading and spacing */
-.gridItems h2 {
-  margin-bottom: 10px;
-}
-
-/* Remove default list styles */
-.gridItems ul {
-  list-style-type: none;
+* {
+  margin: 0;
   padding: 0;
 }
+body {
+  background-color: antiquewhite;
+  align-items: center;
+}
+main {
+  border: solid 1px black;
+  width: 80vw;
+}
 
-.gridItems li {
-  margin-bottom: 5px;
+.header {
+  display: grid;
+}
+
+li {
+  list-style: none;
+}
+
+ul {
+  text-align: center;
+  padding: 0 0 0 0;
+  margin: 10px;
+}
+
+a {
+  color: #000000;
+  text-decoration: none;
+}
+
+.footerGrid {
+  display: grid;
+}
+
+.gridItemsBox {
+  display: grid;
+
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: auto;
+  text-align: center;
+  gap: 20px;
+  background-color: burlywood;
+}
+
+.gridItems {
+  text-align: center;
+  height: 346px;
+  width: 346px;
+  border-style: solid;
+  border-radius: 8px;
+  background-color: antiquewhite;
 }

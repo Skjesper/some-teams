@@ -13,10 +13,10 @@
 </head>
 
 <header>
-  <h1>some-teams</h1>
+  <h1>some teams</h1>
   <nav>
-    <a href="/index.php">Home</a>
-    <a href="/about.php">About</a>
+    <a href="index.php">home</a>
+    <a href="about.php">about</a>
   </nav>
 </header>
 

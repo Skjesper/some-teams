@@ -13,11 +13,15 @@
 </head>
 
 <header>
-  <div class="headerStyle">
-    <h1>some-teams</h1>
+  <h1>some-teams</h1>
+
+  <a href="/index.php">
     <button>Home</button>
+  </a>
+  <a href="/about.php">
     <button>About</button>
-  </div>
+  </a>
+
 </header>
 
 <body>

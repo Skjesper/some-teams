@@ -2,7 +2,7 @@
 </body>
 
 <footer>
-  <h3>Jesper Skeppstedt est 1993
+  <h3>Jesper Skeppstedt: <?= $year = date("Y") ?>
   </h3>
 
 </footer>

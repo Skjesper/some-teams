@@ -14,14 +14,10 @@
 
 <header>
   <h1>some-teams</h1>
-
-  <a href="/index.php">
-    <button>Home</button>
-  </a>
-  <a href="/about.php">
-    <button>About</button>
-  </a>
-
+  <nav>
+    <a href="/index.php">Home</a>
+    <a href="/about.php">About</a>
+  </nav>
 </header>
 
 <body>

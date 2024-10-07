@@ -7,9 +7,33 @@
   padding: 0;
 }
 
+header {
+  display: grid;
+  grid-template-columns: 2fr 2fr 1fr;
+  align-items: center;
+  border: #000;
+  border-style: dashed;
+  border-width: 2px;
+  width: 80vw;
+  margin: auto;
+}
+
 header h1 {
   font-size: 80px;
   text-align: center;
+  grid-column: 1;
+}
+
+nav {
+  color: #000000;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 40px;
+}
+
+header nav {
+  grid-column: 3;
+  justify-content: end;
 }
 
 .gridItemsBox {
@@ -51,4 +75,16 @@ header h1 {
   color: #000;
   text-decoration: none;
   font-weight: bold;
+}
+
+footer {
+  display: grid;
+  grid-template-columns: 2fr 2fr 1fr;
+  align-items: center;
+  border: #000;
+  border-style: dashed;
+  border-width: 2px;
+  width: 80vw;
+  height: 100px;
+  margin: auto;
 }

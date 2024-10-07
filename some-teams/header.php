@@ -13,10 +13,11 @@
 </head>
 
 <header>
-  <h1>some-teams</h1>
-  <button>Home</button>
-  <button>About</button>
-
+  <div class="headerStyle">
+    <h1>some-teams</h1>
+    <button>Home</button>
+    <button>About</button>
+  </div>
 </header>
 
 <body>

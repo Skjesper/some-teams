@@ -1,0 +1,201 @@
+:root {
+  font-family: 'Poppins';
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  display: grid;
+  grid-template-columns: 2fr 2fr 1fr;
+  align-items: center;
+  margin: auto;
+  white-space: nowrap; /* Prevents text from wrapping to a new line */
+}
+
+header h1 {
+  font-size: 80px;
+  text-align: center;
+  grid-column: 1;
+  white-space: nowrap;
+}
+
+nav {
+  color: #000;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 40px;
+  white-space: nowrap;
+  grid-column: 3;
+  justify-content: end;
+}
+
+a {
+  text-decoration: none;
+  color: #000;
+}
+
+.textAboutBox {
+  background-color: antiquewhite;
+  width: 80vw;
+  min-height: 35vw;
+  margin: 20px auto;
+  margin-bottom: auto;
+  border: 3px solid;
+  border-radius: 20px;
+}
+
+/* Add margin for all text elements in .textAboutBox */
+.textAboutBox h2,
+.textAboutBox h3,
+.textAboutBox p {
+  margin: 20px; /* Adds 20px margin to h2, h3, and p */
+  text-align: center; /* Centering the text */
+  margin-bottom: auto;
+}
+
+.textAboutBox h2 {
+  font-size: 60px;
+}
+
+.textAboutBox h3 {
+  font-size: 50px;
+}
+
+.textAboutBox p {
+  font-weight: 400;
+  font-size: 28px;
+}
+
+.gridItemsBox {
+  display: grid;
+  grid-template-columns: repeat(
+    auto-fit,
+    minmax(450px, 1fr)
+  ); /* auto-fit creates as many columns as the space allows */
+  gap: 10px;
+}
+
+.gridItems {
+  background-color: antiquewhite;
+  border: 3px solid #000;
+  border-radius: 15px;
+  padding: 10px;
+  text-align: center;
+}
+
+.gridItems h2 {
+  margin-bottom: 10px;
+}
+
+.gridItems img {
+  margin-bottom: 10px;
+}
+
+.gridItems ul {
+  list-style: none;
+  padding: 0;
+  margin: 10px 0;
+}
+
+.gridItems ul li {
+  margin-bottom: 5px;
+}
+
+.gridItems a {
+  color: #000;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+footer {
+  border: #000;
+  width: 80vw;
+  height: 50px;
+  margin: auto;
+  margin-bottom: 20px;
+  align-items: center;
+}
+
+footer h3 {
+  font-size: 80%;
+  text-align: center;
+}
+
+/* Media Queries */
+@media (max-width: 1200px) {
+  header h1 {
+    font-size: 60px; /* Smaller font size */
+  }
+  nav {
+    font-size: 40px;
+  }
+
+  .gridItemsBox {
+    grid-template-columns: repeat(3, 1fr); /* Change grid to 3 columns */
+  }
+  .textAboutBox {
+    min-height: 50vw;
+  }
+  .textAboutBox h3 {
+    font-size: 45px;
+  }
+}
+
+@media (max-width: 900px) {
+  header h1 {
+    font-size: 50px;
+  }
+  nav {
+    font-size: 35px;
+  }
+  .textAboutBox p {
+    font-size: 20px;
+  }
+  .textAboutBox h3 {
+    font-size: 35px;
+  }
+  .gridItemsBox {
+    grid-template-columns: repeat(2, 1fr); /* Change grid to 2 columns */
+  }
+}
+
+@media (max-width: 600px) {
+  header h1 {
+    font-size: 40px; /* Even smaller font size */
+  }
+  .textAboutBox h3 {
+    font-size: 19px;
+  }
+  .textAboutBox h2 {
+    font-size: 50px;
+  }
+  .gridItemsBox {
+    grid-template-columns: 1fr; /* Single column grid */
+    width: 90vw; /* Adjust width for mobile */
+  }
+  nav {
+    font-size: 25px;
+  }
+}
+
+@media (max-width: 400px) {
+  header h1 {
+    font-size: 20px; /* Smallest font size */
+  }
+  nav {
+    font-size: 15px;
+  }
+  .textAboutBox h2 {
+    font-size: 40px;
+  }
+  .textAboutBox h3 {
+    font-size: 14px;
+  }
+  .textAboutBox p {
+    font-size: 12px;
+    margin: auto 20px;
+  }
+}

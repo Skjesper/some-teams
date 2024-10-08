@@ -13,6 +13,7 @@ header {
   align-items: center;
   width: 80vw;
   margin: auto;
+  white-space: nowrap; /* Prevents text from wrapping to a new line */
 }
 
 header h1 {
@@ -70,7 +71,7 @@ a {
 .gridItemsBox {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  grid-gap: 20px;
+  grid-gap: 20px; /* Keeping consistent gap */
   margin: 20px auto;
   width: 80vw;
 }
@@ -120,23 +121,49 @@ footer h3 {
   text-align: center;
 }
 
-@media (max-width: 1366px) {
-  .gridItemsBox {
-    grid-template-columns: repeat(3, 1fr);
-    grid-gap: 25px;
+/* Media query for screens smaller than 1200px */
+@media (max-width: 1200px) {
+  header h1 {
+    font-size: 60px; /* Smaller font size for the header */
   }
-}
 
-@media (max-width: 1024px) {
   .gridItemsBox {
-    grid-template-columns: repeat(2, 1fr);
-    grid-gap: 25px;
-  }
-}
-
-@media (max-width: 768px) {
-  .gridItemsBox {
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(3, 1fr); /* Change grid to 3 columns */
     grid-gap: 20px;
+  }
+}
+
+/* Media query for screens smaller than 900px */
+@media (max-width: 900px) {
+  header h1 {
+    font-size: 50px; /* Smaller font size */
+  }
+
+  .gridItemsBox {
+    grid-template-columns: repeat(2, 1fr); /* Change grid to 2 columns */
+    grid-gap: 20px;
+  }
+}
+
+/* Media query for screens smaller than 600px */
+@media (max-width: 600px) {
+  header h1 {
+    font-size: 40px; /* Even smaller font size */
+  }
+
+  .gridItemsBox {
+    grid-template-columns: 1fr; /* Single column grid for mobile */
+    grid-gap: 15px;
+    width: 90vw; /* Adjust width for mobile */
+  }
+}
+
+/* Media query for very small screens (less than 400px) */
+@media (max-width: 400px) {
+  header h1 {
+    font-size: 20px; /* Smallest font size */
+  }
+  nav {
+    font-size: 15px;
   }
 }

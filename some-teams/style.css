@@ -43,6 +43,7 @@ a {
   width: 80vw;
   min-height: 35vw;
   margin: 20px auto;
+  margin-bottom: auto;
   border: 3px solid;
   border-radius: 20px;
 }
@@ -53,6 +54,7 @@ a {
 .textAboutBox p {
   margin: 20px; /* Adds 20px margin to h2, h3, and p */
   text-align: center; /* Centering the text */
+  margin-bottom: auto;
 }
 
 .textAboutBox h2 {
@@ -70,10 +72,11 @@ a {
 
 .gridItemsBox {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  grid-gap: 20px; /* Consistent gap */
-  margin: 20px auto;
-  width: 80vw;
+  grid-template-columns: repeat(
+    auto-fit,
+    minmax(450px, 1fr)
+  ); /* auto-fit creates as many columns as the space allows */
+  gap: 10px;
 }
 
 .gridItems {
@@ -114,85 +117,10 @@ footer {
   height: 50px;
   margin: auto;
   margin-bottom: 20px;
+  align-items: center;
 }
 
 footer h3 {
-  font-size: 25px;
+  font-size: 80%;
   text-align: center;
-}
-
-/* Media Queries */
-@media (max-width: 1200px) {
-  header h1 {
-    font-size: 60px; /* Smaller font size */
-  }
-  nav {
-    font-size: 40px;
-  }
-
-  .gridItemsBox {
-    grid-template-columns: repeat(3, 1fr); /* Change grid to 3 columns */
-  }
-  .textAboutBox {
-    min-height: 50vw;
-  }
-  .textAboutBox h3 {
-    font-size: 45px;
-  }
-}
-
-@media (max-width: 900px) {
-  header h1 {
-    font-size: 50px;
-  }
-  nav {
-    font-size: 35px;
-  }
-  .textAboutBox p {
-    font-size: 20px;
-  }
-  .textAboutBox h3 {
-    font-size: 35px;
-  }
-  .gridItemsBox {
-    grid-template-columns: repeat(2, 1fr); /* Change grid to 2 columns */
-  }
-}
-
-@media (max-width: 600px) {
-  header h1 {
-    font-size: 40px; /* Even smaller font size */
-  }
-  .textAboutBox h3 {
-    font-size: 19px;
-  }
-  .textAboutBox h2 {
-    font-size: 50px;
-  }
-  .gridItemsBox {
-    grid-template-columns: 1fr; /* Single column grid */
-    width: 90vw; /* Adjust width for mobile */
-  }
-  nav {
-    font-size: 25px;
-  }
-}
-
-@media (max-width: 400px) {
-  header h1 {
-    font-size: 20px; /* Smallest font size */
-  }
-  nav {
-    font-size: 15px;
-  }
-  .textAboutBox h2 {
-    font-size: 40px;
-  }
-  .textAboutBox h3 {
-    font-size: 14px;
-  }
-  .textAboutBox p {
-    font-size: 12px;
-    margin: auto 20px;
-  }
 }

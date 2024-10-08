@@ -1,0 +1,97 @@
+:root {
+  --crazyPink: #f25ecb;
+  --primaryBlue: #044bd9;
+  --accentBlue: #0460d9;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: var(--primaryBlue);
+  font-family: 'Poppins';
+  display: flex; /* Control the main, header and footer.*/
+  justify-content: center;
+}
+
+main {
+  background-color: var(--crazyPink);
+  display: grid;
+  width: 70vw;
+  grid-template-rows: auto 1fr auto; /* Decide how the header, content , footer is positioned on the main*/
+}
+
+header {
+  display: grid;
+  grid-template-columns: 4fr 1fr; /*Relation between title and nav*/
+  align-items: center;
+  padding: 10px;
+}
+
+header h1 {
+  font-size: 45px;
+}
+
+nav {
+  display: flex;
+  font-weight: bold;
+  font-size: 30px;
+  justify-content: space-around;
+  align-items: end;
+}
+
+a {
+  text-decoration: none;
+  color: #000;
+}
+
+ul {
+  list-style: none; /* gets rid of the dots in the list*/
+  padding: 0;
+}
+
+.gridItemsBox {
+  display: grid;
+  grid-template-columns: repeat(
+    auto-fit,
+    minmax(300px, 1fr)
+  ); /* auto-fit creates as many columns as the space allows, also prettier format this weird */
+  gap: 10px;
+  padding: 10px;
+}
+
+.gridItems {
+  background-color: #0460d9;
+  border-style: double;
+  text-align: center;
+}
+
+.textAboutBox {
+  background-color: antiquewhite;
+  text-align: center;
+}
+
+.textAboutBox h2 {
+  font-size: 60px;
+}
+
+.textAboutBox h3 {
+  font-size: 35px;
+}
+
+.textAboutBox p {
+  font-weight: 400;
+  font-size: 28px;
+  margin: 30px;
+}
+
+footer {
+  text-align: center;
+  margin: 10px 0;
+}
+
+footer h3 {
+  font-weight: 400;
+}

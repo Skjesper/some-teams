@@ -20,16 +20,15 @@ header h1 {
   font-size: 80px;
   text-align: center;
   grid-column: 1;
+  white-space: nowrap;
 }
 
 nav {
-  color: #000000;
+  color: #000;
   text-decoration: none;
   font-weight: bold;
   font-size: 40px;
-}
-
-header nav {
+  white-space: nowrap;
   grid-column: 3;
   justify-content: end;
 }
@@ -38,40 +37,41 @@ a {
   text-decoration: none;
   color: #000;
 }
+
 .textAboutBox {
   background-color: antiquewhite;
   width: 80vw;
   min-height: 35vw;
   margin: 20px auto;
-  border-style: solid;
-  border-width: 3px;
+  border: 3px solid;
   border-radius: 20px;
 }
 
+/* Add margin for all text elements in .textAboutBox */
+.textAboutBox h2,
+.textAboutBox h3,
+.textAboutBox p {
+  margin: 20px; /* Adds 20px margin to h2, h3, and p */
+  text-align: center; /* Centering the text */
+}
+
 .textAboutBox h2 {
-  text-align: center;
-  font-size: 80px;
-  margin-bottom: 10px;
+  font-size: 60px;
 }
 
 .textAboutBox h3 {
-  text-align: center;
   font-size: 50px;
-  margin-bottom: 15px;
 }
 
 .textAboutBox p {
   font-weight: 400;
   font-size: 28px;
-  text-align: center;
-  margin-left: 150px;
-  margin-right: 150px;
 }
 
 .gridItemsBox {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  grid-gap: 20px; /* Keeping consistent gap */
+  grid-gap: 20px; /* Consistent gap */
   margin: 20px auto;
   width: 80vw;
 }
@@ -121,49 +121,78 @@ footer h3 {
   text-align: center;
 }
 
-/* Media query for screens smaller than 1200px */
+/* Media Queries */
 @media (max-width: 1200px) {
   header h1 {
-    font-size: 60px; /* Smaller font size for the header */
+    font-size: 60px; /* Smaller font size */
+  }
+  nav {
+    font-size: 40px;
   }
 
   .gridItemsBox {
     grid-template-columns: repeat(3, 1fr); /* Change grid to 3 columns */
-    grid-gap: 20px;
+  }
+  .textAboutBox {
+    min-height: 50vw;
+  }
+  .textAboutBox h3 {
+    font-size: 45px;
   }
 }
 
-/* Media query for screens smaller than 900px */
 @media (max-width: 900px) {
   header h1 {
-    font-size: 50px; /* Smaller font size */
+    font-size: 50px;
   }
-
+  nav {
+    font-size: 35px;
+  }
+  .textAboutBox p {
+    font-size: 20px;
+  }
+  .textAboutBox h3 {
+    font-size: 35px;
+  }
   .gridItemsBox {
     grid-template-columns: repeat(2, 1fr); /* Change grid to 2 columns */
-    grid-gap: 20px;
   }
 }
 
-/* Media query for screens smaller than 600px */
 @media (max-width: 600px) {
   header h1 {
     font-size: 40px; /* Even smaller font size */
   }
-
+  .textAboutBox h3 {
+    font-size: 19px;
+  }
+  .textAboutBox h2 {
+    font-size: 50px;
+  }
   .gridItemsBox {
-    grid-template-columns: 1fr; /* Single column grid for mobile */
-    grid-gap: 15px;
+    grid-template-columns: 1fr; /* Single column grid */
     width: 90vw; /* Adjust width for mobile */
+  }
+  nav {
+    font-size: 25px;
   }
 }
 
-/* Media query for very small screens (less than 400px) */
 @media (max-width: 400px) {
   header h1 {
     font-size: 20px; /* Smallest font size */
   }
   nav {
     font-size: 15px;
+  }
+  .textAboutBox h2 {
+    font-size: 40px;
+  }
+  .textAboutBox h3 {
+    font-size: 14px;
+  }
+  .textAboutBox p {
+    font-size: 12px;
+    margin: auto 20px;
   }
 }

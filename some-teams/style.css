@@ -65,6 +65,10 @@ ul {
   border-radius: 15px;
 }
 
+.gridItems h2 {
+  margin: 5px;
+}
+
 .textAboutBox {
   background-color: white;
   border-style: double;

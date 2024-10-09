@@ -14,7 +14,8 @@ require_once __DIR__ . "/data.php" ?>
       <img src="<?= $teamInfo['logo'] ?>" alt="<?= $teamName ?>" width="90px" height="90px">
       <ul>
         <li>
-          <strong>League:</strong> <?= $teamInfo['league'] ?>
+          <strong>League:</strong> <?= stripslashes($teamInfo['league']) //removes slash from 'league*// 
+                                    ?>
         </li>
         <li>
           <strong>City:</strong> <?= $teamInfo['city'] ?>
@@ -30,7 +31,8 @@ require_once __DIR__ . "/data.php" ?>
         </li>
       </ul>
     </article>
-  <?php } ?>
+  <?php }
+  ?>
 </div>
 
-<?php require __DIR__ . "/footer.php";
+<?php require_once __DIR__ . "/footer.php";

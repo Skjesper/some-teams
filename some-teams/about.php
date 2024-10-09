@@ -8,10 +8,6 @@ require_once __DIR__ . "/header.php"; ?>
   <p>
     Okey the cat is out of the bag.. It's me Jesper Skeppstedt.<br> The creator of some teams. Hope you find the site useful.
   </p>
-
-
-  </a>
-
 </article>
 
 

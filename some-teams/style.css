@@ -40,7 +40,7 @@ nav {
 }
 
 a {
-  text-decoration: none;
+  text-decoration: none; /* gets rid of the underline on the links */
   color: #000;
 }
 
